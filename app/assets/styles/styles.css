@@ -1,2 +1,10 @@
-@import "./base/global";
-@import "./base/variables";
+@import "normalize.css";
+@import "base/_variables";
+
+.hello-world {
+  background-color: $blue;
+  display: inline-block;
+  &__text {
+    color: $red;
+  }
+}

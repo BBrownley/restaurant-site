@@ -1,3 +1,6 @@
 .hello-world {
-  color: $blue;
+  background-color: $blue;
+  &__text {
+    color: $green;
+  }
 }
