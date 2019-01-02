@@ -1,10 +1,13 @@
-@import "normalize.css";
 @import "base/_variables";
+@import "normalize.css";
 
-.hello-world {
-  background-color: $blue;
-  display: inline-block;
-  &__text {
-    color: $red;
-  }
-}
+@import "base/_global";
+@import "base/_mixins";
+
+@import "modules/_header";
+@import "modules/_wrapper";
+
+
+/* font-family: 'Charm', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Montserrat', sans-serif; */
