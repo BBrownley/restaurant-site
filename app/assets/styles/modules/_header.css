@@ -1,0 +1,30 @@
+.header {
+  background-color: #BBB;
+  &__logo {
+    display: inline-block;
+    &__text {
+      line-height: 2.125rem;
+      &__primary {
+        font-size: 3rem;
+        display: block;
+        letter-spacing: .425rem;
+        font-family: 'Charm', cursive;
+      }
+      &__secondary {
+        display: block;
+        font-weight: 100;
+        letter-spacing: .3125rem;
+        font-family: 'Playfair Display', serif;
+        text-align: right;
+      }
+    }
+  }
+  &__navigation {
+    display: inline-block;
+    float: right;
+    background-color: gray;
+    & > a {
+      padding: 20px;
+    }
+  }
+}
