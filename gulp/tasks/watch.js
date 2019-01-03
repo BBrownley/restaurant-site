@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const watch = require("gulp-watch");
-const browserSync = require("browser-sync").create(); /*browser-sync has many methods, we
+const browserSync = require("browser-sync").create() /*browser-sync has many methods, we
 only need the .create() method, hence the .create() at the end */
 
 gulp.task("watch", function() {
