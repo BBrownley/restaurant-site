@@ -360,8 +360,12 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 .header {
-  background-color: #BBB;
+  background-color: #EEE;
 }
+.header__image {
+    display: block;
+    height: 100vh;
+  }
 .header__logo {
     display: inline-block;
   }
@@ -384,10 +388,11 @@ body {
 .header__navigation {
     display: inline-block;
     float: right;
-    background-color: gray;
+    background-color: #DDD;
   }
 .header__navigation > a {
       padding: 20px;
+      background-color: #CCC;
     }
 .wrapper {
   padding-left: 18px;

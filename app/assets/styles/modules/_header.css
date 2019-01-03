@@ -1,5 +1,9 @@
 .header {
-  background-color: #FFF;
+  background-color: #EEE;
+  &__image {
+    display: block;
+    height: 100vh;
+  }
   &__logo {
     display: inline-block;
     &__text {
@@ -22,9 +26,10 @@
   &__navigation {
     display: inline-block;
     float: right;
-    background-color: gray;
+    background-color: #DDD;
     & > a {
       padding: 20px;
+      background-color: #CCC;
     }
   }
 }
