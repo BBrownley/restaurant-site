@@ -360,40 +360,80 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 .header {
-  background-color: #EEE;
+
+  position: relative;
+  height: 100vh;
+
+
 }
+.header__top {
+    height: 17.5vh;
+    min-height: 110px;
+    position: relative;
+    background-color: green;
+  }
+.header__top__logo {
+      background-color: yellow;
+      height: 100%;
+      display: inline-block;
+      text-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
+    }
+.header__top__logo__text {
+        line-height: 2.125rem;
+        background-color: red;
+      }
+.header__top__logo__text__primary {
+          font-size: 3rem;
+          display: block;
+          letter-spacing: .425rem;
+          font-family: 'Charm', cursive;
+          color: #FFF;
+          font-weight: 100;
+        }
+.header__top__logo__text__secondary {
+          display: block;
+          font-weight: 400;
+          letter-spacing: .125rem;
+          font-family: 'Playfair Display', serif;
+          text-align: right;
+          color: #F0E68C;
+        }
+.header__top__navigation {
+      background-color: blue;
+      display: inline-block;
+      float: right;
+      position: absolute;
+      top: 35%;
+      right: 0;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+    }
+.header__top__navigation > a {
+        padding: 20px;
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+        text-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
+      }
+.header__top__navigation > a:visited {
+          color: white;
+        }
+.header__bottom {
+    /* height: 82.5vh; */
+  }
 .header__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
     display: block;
-    height: 100vh;
+    height: 100%;
+    opacity: .75;
+    -webkit-filter: brightness(50%);
+            filter: brightness(50%);
+    background-color: black;
+    width: 100%;
   }
-.header__logo {
-    display: inline-block;
-  }
-.header__logo__text {
-      line-height: 2.125rem;
-    }
-.header__logo__text__primary {
-        font-size: 3rem;
-        display: block;
-        letter-spacing: .425rem;
-        font-family: 'Charm', cursive;
-      }
-.header__logo__text__secondary {
-        display: block;
-        font-weight: 100;
-        letter-spacing: .3125rem;
-        font-family: 'Playfair Display', serif;
-        text-align: right;
-      }
-.header__navigation {
-    display: inline-block;
-    float: right;
-    background-color: #DDD;
-  }
-.header__navigation > a {
-      padding: 20px;
-      background-color: #CCC;
-    }
 .wrapper {
   padding-left: 18px;
   padding-right: 18px;
