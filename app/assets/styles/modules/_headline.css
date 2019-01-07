@@ -1,0 +1,28 @@
+.headline {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #CCC;
+  &--primary {
+    font-weight: 100;
+    font-size: 4rem;
+    font-family: 'Charm', cursive;
+    @mixin textShadowBasic;
+  }
+  &--secondary {
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    @mixin textShadowBasic;
+  }
+  &--no-b-margin {
+    margin-bottom: 0;
+  }
+  &--no-t-margin {
+    margin-top: 0;
+  }
+  &--b-margin-small {
+    margin-bottom: .5em;
+  }
+  &--t-margin-small {
+    margin-top: .5em;
+  }
+}
