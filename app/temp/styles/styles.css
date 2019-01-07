@@ -363,6 +363,31 @@ body {
 
   position: relative;
   height: 100vh;
+  background-image: url("../../assets/images/PizzaImage1/Pizza1--large.jpg");
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  z-index: -100;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: .75;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+
+  /* &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: .75;
+    filter: brightness(50%);
+  } */
 
 
 }
@@ -417,6 +442,10 @@ body {
 .header__top__navigation > a:visited {
           color: white;
         }
+.header__top__navigation > a:hover {
+          color: #F0E68C;
+          text-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
+        }
 .header__bottom {
     text-align: center;
   }
@@ -427,19 +456,6 @@ body {
       color: #CCC;
       text-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
     }
-.header__image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -100;
-    display: block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    opacity: .75;
-    -webkit-filter: brightness(50%);
-            filter: brightness(50%);
-  }
 .wrapper {
   padding-left: 18px;
   padding-right: 18px;

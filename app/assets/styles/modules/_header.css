@@ -2,6 +2,17 @@
 
   position: relative;
   height: 100vh;
+  background-image: url("../../assets/images/PizzaImage1/Pizza1--large.jpg");
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  z-index: -100;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: .75;
+  filter: brightness(50%);
 
   &__top {
     height: 115px;
@@ -11,7 +22,7 @@
       /* background-color: yellow; */
       height: 100%;
       display: inline-block;
-      text-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
+      @mixin textShadowBasic;
       &__text {
         line-height: 2.125rem;
         /* background-color: red; */
@@ -46,9 +57,13 @@
         text-decoration: none;
         color: white;
         font-weight: 700;
-        text-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
+        @mixin textShadowBasic;
         &:visited {
           color: white;
+        }
+        &:hover {
+          color: $mainKhaki;
+          @mixin textShadowBasic;
         }
       }
     }
@@ -61,22 +76,22 @@
     }
     &__hours {
       color: #CCC;
-      text-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
+      @mixin textShadowBasic;
     }
   }
 
-  &__image {
+  /* &__image {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -100;
     display: block;
     background-repeat: no-repeat;
-    background-size: contain;
     background-position: center;
+    background-size: cover;
     opacity: .75;
     filter: brightness(50%);
-  }
+  } */
 
 
 }
