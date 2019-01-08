@@ -8,12 +8,22 @@
   &__top {
     height: 115px;
     position: relative;
+<<<<<<< HEAD
     &__logo {
+=======
+    /* background-color: green; */
+    &__logo {
+      /* background-color: yellow; */
+>>>>>>> 33e36ef9a2ea47e88c59c582839176d0f1a0da25
       height: 100%;
       display: inline-block;
       @mixin textShadowBasic;
       &__text {
         line-height: 2.125rem;
+<<<<<<< HEAD
+=======
+        /* background-color: red; */
+>>>>>>> 33e36ef9a2ea47e88c59c582839176d0f1a0da25
         &__primary {
           font-size: 3rem;
           display: block;
@@ -33,6 +43,10 @@
       }
     }
     &__navigation {
+<<<<<<< HEAD
+=======
+      /* background-color: blue; */
+>>>>>>> 33e36ef9a2ea47e88c59c582839176d0f1a0da25
       display: inline-block;
       float: right;
       position: absolute;
@@ -59,7 +73,11 @@
     }
     &__hours {
       color: #CCC;
+<<<<<<< HEAD
       @mixin textShadowBasic;
+=======
+      text-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
+>>>>>>> 33e36ef9a2ea47e88c59c582839176d0f1a0da25
     }
   }
 
@@ -70,11 +88,18 @@
     z-index: -100;
     display: block;
     background-repeat: no-repeat;
+<<<<<<< HEAD
     width: 100%; /* TODO: Make image responsive */
     background-position: center;
     opacity: .75;
     filter: brightness(50%);
     height: 100%;
+=======
+    background-size: contain;
+    background-position: center;
+    opacity: .75;
+    filter: brightness(50%);
+>>>>>>> 33e36ef9a2ea47e88c59c582839176d0f1a0da25
   }
 
 }
