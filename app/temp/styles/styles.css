@@ -363,24 +363,21 @@ body {
 
   position: relative;
   height: 100vh;
-
+  overflow: hidden;
+  display: block;
 
 }
 .header__top {
-    height: 17.5vh;
-    min-height: 110px;
+    height: 115px;
     position: relative;
-    background-color: green;
   }
 .header__top__logo {
-      background-color: yellow;
       height: 100%;
       display: inline-block;
       text-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
     }
 .header__top__logo__text {
         line-height: 2.125rem;
-        background-color: red;
       }
 .header__top__logo__text__primary {
           font-size: 3rem;
@@ -399,11 +396,10 @@ body {
           color: #F0E68C;
         }
 .header__top__navigation {
-      background-color: blue;
       display: inline-block;
       float: right;
       position: absolute;
-      top: 35%;
+      top: 45%;
       right: 0;
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%);
@@ -419,20 +415,28 @@ body {
           color: white;
         }
 .header__bottom {
-    /* height: 82.5vh; */
+    text-align: center;
   }
+.header__bottom__message > span {
+      display: block;
+    }
+.header__bottom__hours {
+      color: #CCC;
+      text-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
+    }
 .header__image {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -100;
     display: block;
-    height: 100%;
+    background-repeat: no-repeat;
+    width: 100%; /* TODO: Make image responsive */
+    background-position: center;
     opacity: .75;
     -webkit-filter: brightness(50%);
             filter: brightness(50%);
-    background-color: black;
-    width: 100%;
+    height: 100%;
   }
 .wrapper {
   padding-left: 18px;
@@ -460,6 +464,68 @@ body {
     padding-left: 0;
     padding-right: 0;
   }
+.headline {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #CCC;
+}
+.headline--primary {
+    font-weight: 100;
+    font-size: 4rem;
+    font-family: 'Charm', cursive;
+    text-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
+  }
+.headline--secondary {
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
+  }
+.headline--no-b-margin {
+    margin-bottom: 0;
+  }
+.headline--no-t-margin {
+    margin-top: 0;
+  }
+.headline--b-margin-small {
+    margin-bottom: .5em;
+  }
+.headline--t-margin-small {
+    margin-top: .5em;
+  }
+.about {
+
+  height: 600px;
+  position: relative;
+
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.about__info {
+    height: auto;
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px;
+    border: 5px solid black;
+    text-align: center;
+  }
+.about__info__heading {
+      /* TODO: May want to convert some of these rules into a mixin for headers */
+      font-size: 3rem;
+      display: block;
+      letter-spacing: .425rem;
+      font-family: 'Charm', cursive;
+      color: #FFF;
+      font-weight: 100;
+      margin-top: 0;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
+      color: #F0E68C;
+    }
+.about__info > p {
+      font-family: 'Playfair Display', serif;
+      color: black;
+      font-size: 1.125rem;
+    }
 /* font-family: 'Charm', cursive;
 font-family: 'Playfair Display', serif;
 font-family: 'Montserrat', sans-serif; */

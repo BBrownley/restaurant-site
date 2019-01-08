@@ -1,0 +1,35 @@
+.about {
+
+  height: 600px;
+  position: relative;
+
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+
+  &__info {
+    height: auto;
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px;
+    border: 5px solid black;
+    text-align: center;
+    &__heading {
+      /* TODO: May want to convert some of these rules into a mixin for headers */
+      font-size: 3rem;
+      display: block;
+      letter-spacing: .425rem;
+      font-family: 'Charm', cursive;
+      color: #FFF;
+      font-weight: 100;
+      margin-top: 0;
+      margin-bottom: 10px;
+      @mixin textShadowBasic;
+      color: $mainKhaki;
+    }
+    & > p {
+      font-family: 'Playfair Display', serif;
+      color: black;
+      font-size: 1.125rem;
+    }
+  }
+}

@@ -6,6 +6,8 @@
 
 @import "modules/_header";
 @import "modules/_wrapper";
+@import "modules/_headline";
+@import "modules/_about";
 
 
 /* font-family: 'Charm', cursive;
