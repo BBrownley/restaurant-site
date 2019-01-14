@@ -1,18 +1,21 @@
 .about {
 
-  height: 600px;
   position: relative;
 
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  /* border-top: 2px solid black;
+  border-bottom: 2px solid black; */
 
   &__info {
-    height: auto;
-    width: 50%;
+    /* height: auto;
     margin: 0 auto;
-    padding: 50px;
-    border: 5px solid black;
+    padding: 50px; */
+    /* border: 5px solid black; */
     text-align: center;
+/*
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.39);
+    -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.39);
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.39); */
+
     &__heading {
       /* TODO: May want to convert some of these rules into a mixin for headers */
       font-size: 3rem;

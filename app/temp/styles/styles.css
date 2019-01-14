@@ -362,21 +362,21 @@ body {
 .header {
 
   position: relative;
-  height: 100vh;
+
+
   overflow: hidden;
   display: block;
+  border-bottom: 3px solid black;
+
+  -webkit-box-shadow: 0px 1.5px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 1.5px 5px 0px rgba(0,0,0,0.75);
 
 }
 .header__top {
     height: 115px;
     position: relative;
   }
-/* background-color: green; */
 .header__top__logo {
-<<<<<<< HEAD
-=======
-      /* background-color: yellow; */
->>>>>>> 33e36ef9a2ea47e88c59c582839176d0f1a0da25
       height: 100%;
       display: inline-block;
       text-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
@@ -384,7 +384,6 @@ body {
 .header__top__logo__text {
         line-height: 2.125rem;
       }
-/* background-color: red; */
 .header__top__logo__text__primary {
           font-size: 3rem;
           display: block;
@@ -402,10 +401,7 @@ body {
           color: #F0E68C;
         }
 .header__top__navigation {
-<<<<<<< HEAD
-=======
-      /* background-color: blue; */
->>>>>>> 33e36ef9a2ea47e88c59c582839176d0f1a0da25
+
       display: inline-block;
       float: right;
       position: absolute;
@@ -432,8 +428,14 @@ body {
     }
 .header__bottom__hours {
       color: #CCC;
+
       text-shadow: 1px 1px 2px rgba(15, 15, 15, 1);
+
     }
+.header__bottom__hours--last {
+        padding-bottom: 3.6rem;
+        margin-bottom: 0;
+      }
 .header__image {
     position: absolute;
     top: 0;
@@ -441,19 +443,16 @@ body {
     z-index: -100;
     display: block;
     background-repeat: no-repeat;
-<<<<<<< HEAD
-    width: 100%; /* TODO: Make image responsive */
-=======
-    background-size: contain;
->>>>>>> 33e36ef9a2ea47e88c59c582839176d0f1a0da25
+    background-size: cover;
     background-position: center;
     opacity: .75;
     -webkit-filter: brightness(50%);
             filter: brightness(50%);
-<<<<<<< HEAD
-    height: 100%;
-=======
->>>>>>> 33e36ef9a2ea47e88c59c582839176d0f1a0da25
+
+    background: url("/assets/images/testimonials-bg.jpg") top center no-repeat; /*top center is how the img is aligned */
+    background-size: cover;
+
+
   }
 .wrapper {
   padding-left: 18px;
@@ -509,23 +508,23 @@ body {
 .headline--t-margin-small {
     margin-top: .5em;
   }
-<<<<<<< HEAD
 .about {
 
-  height: 600px;
   position: relative;
-
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
 }
+/* border-top: 2px solid black;
+  border-bottom: 2px solid black; */
 .about__info {
-    height: auto;
-    width: 50%;
+    /* height: auto;
     margin: 0 auto;
-    padding: 50px;
-    border: 5px solid black;
+    padding: 50px; */
+    /* border: 5px solid black; */
     text-align: center;
   }
+/*
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.39);
+    -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.39);
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.39); */
 .about__info__heading {
       /* TODO: May want to convert some of these rules into a mixin for headers */
       font-size: 3rem;
@@ -544,8 +543,103 @@ body {
       color: black;
       font-size: 1.125rem;
     }
-=======
->>>>>>> 33e36ef9a2ea47e88c59c582839176d0f1a0da25
+.row {
+
+  background-color: yellow;
+
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.row--gutters { /* TODO: Fix this class - It pushes content to the next line when it shouldn't be doing that */
+    margin-right: -65px;
+  }
+.row--gutters-large {
+    margin-right: -100px;
+  }
+.row--gutters-small {
+    margin-right: -45px;
+  }
+.row--gutters > div {
+    padding-right: 65px;
+    /* &:last-child {         --Wrong! This affects the width ratios!
+      padding-right: 0;
+    } */
+  }
+.row--gutters-large > div {
+    padding-right: 100px;
+    /* &:last-child {         --Wrong! This affects the width ratios!
+      padding-right: 0;
+    } */
+  }
+.row--gutters-small > div {
+    padding-right: 45px;
+  }
+.row__b-margin-until-medium {
+    margin-bottom: 1rem;
+  }
+.row--t-padding {
+    padding-top: 80px;
+  }
+@media (min-width: 800px) {
+.row {
+
+    /* Using a 12 column layout */
+
+}
+
+    .row__b-margin-until-medium {
+      margin-bottom: 0;
+    }
+
+    .row__medium-4 {
+      float: left; /*When we float elements, they're removed from the normal flow of the page; they must be cleared - use the &::after pseudoclass*/
+      width: 33.33%;
+      background-color: cyan;
+    }
+
+    .row__medium-4--larger {
+      width: 37%;
+    }
+
+    .row__medium-8 {
+      float: left;
+      width: 66.66%;
+      background-color: red;
+    }
+
+    .row__medium-8--smaller {
+      width: 40%;
+      background-color: green;
+    }
+
+    .row__medium-6 {
+      width: 50%;
+      float: left;
+    }
+  }
+@media (min-width: 800px) {
+.row--equal-height-at-medium {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex
+  }
+  }
+.row--equal-height-at-medium > div {
+      float: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+.page-section {
+  padding: 3.6rem 0;
+}
+.menu-preview {
+  background: url("./../../assets/images/CookingBoard/CookingBoard--large.jpg") top center no-repeat;
+  background-size: cover;
+}
 /* font-family: 'Charm', cursive;
 font-family: 'Playfair Display', serif;
 font-family: 'Montserrat', sans-serif; */
