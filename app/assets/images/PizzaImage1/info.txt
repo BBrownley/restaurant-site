@@ -1,0 +1,3 @@
+Link to image: https://www.pexels.com/photo/board-bunch-cooking-food-349609/
+
+Purpose: Used as one of the images in the header, will cycle through others

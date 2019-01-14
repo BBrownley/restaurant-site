@@ -1,0 +1,91 @@
+.row {
+
+  @mixin clearfix;
+
+  background-color: yellow;
+
+  &--gutters { /* TODO: Fix this class - It pushes content to the next line when it shouldn't be doing that */
+    margin-right: -65px;
+  }
+
+  &--gutters-large {
+    margin-right: -100px;
+  }
+
+  &--gutters-small {
+    margin-right: -45px;
+  }
+
+  &--gutters > div {
+    padding-right: 65px;
+    /* &:last-child {         --Wrong! This affects the width ratios!
+      padding-right: 0;
+    } */
+  }
+
+  &--gutters-large > div {
+    padding-right: 100px;
+    /* &:last-child {         --Wrong! This affects the width ratios!
+      padding-right: 0;
+    } */
+  }
+
+  &--gutters-small > div {
+    padding-right: 45px;
+  }
+
+  &__b-margin-until-medium {
+    margin-bottom: 1rem;
+  }
+
+  &--t-padding {
+    padding-top: 80px;
+  }
+
+  @mixin atMedium {
+
+    /* Using a 12 column layout */
+
+    &__b-margin-until-medium {
+      margin-bottom: 0;
+    }
+
+    &__medium-4 {
+      float: left; /*When we float elements, they're removed from the normal flow of the page; they must be cleared - use the &::after pseudoclass*/
+      width: 33.33%;
+      background-color: cyan;
+    }
+
+    &__medium-4--larger {
+      width: 37%;
+    }
+
+    &__medium-8 {
+      float: left;
+      width: 66.66%;
+      background-color: red;
+    }
+
+    &__medium-8--smaller {
+      width: 40%;
+      background-color: green;
+    }
+
+    &__medium-6 {
+      width: 50%;
+      float: left;
+    }
+
+  }
+
+  &--equal-height-at-medium {
+    @mixin atMedium {
+      display: flex;
+    }
+    & > div {
+      float: none;
+      display: flex;
+    }
+  }
+
+}
