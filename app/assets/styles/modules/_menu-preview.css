@@ -1,4 +1,12 @@
 .menu-preview {
   background: url("./../../assets/images/CookingBoard/CookingBoard--large.jpg") top center no-repeat;
   background-size: cover;
+  &__images {
+    background-color: lightblue;
+    margin: 20px;
+    img {
+      width: 49%;
+      height: 49%;
+    }
+  }
 }
