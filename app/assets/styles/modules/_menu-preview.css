@@ -5,8 +5,14 @@
     background-color: lightblue;
     margin: 20px;
     img {
+      position: relative;
       width: 49%;
       height: 49%;
+      &:hover {
+        position: relative;
+        width: 75%;
+        height: 75%;
+      }
     }
   }
 }
