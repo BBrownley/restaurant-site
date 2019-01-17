@@ -1,23 +1,21 @@
 const gulp = require('gulp');
 const watch = require("gulp-watch");
-const browserSync = require("browser-sync").create() /*browser-sync has many methods, we
-only need the .create() method, hence the .create() at the end */
+const browserSync = require("browser-sync");
+const connect = require("gulp-connect-php");
 
 gulp.task("watch", function() {
 
-  //.init starts the server
+  connect.server({}, function (){
+    browserSync({
+      proxy: '127.0.0.1:8000',
+      base: "app",
+      keepalive: true,
+      browser: ["chrome.exe"]
+    });
+  });
 
-  browserSync.init( {
-
-    //We want to create a few settings
-
-    server: {
-      baseDir: "app" /*Where should the server point to?
-      (i.e. where does the index.html live) - It's in the app folder */
-    },
-
-    browser: ["chrome.exe"] //Open chrome as default browser
-
+  gulp.watch('**/*.php').on('change', function () {
+    browserSync.reload();
   });
 
   watch("./app/index.html", function() {
@@ -27,6 +25,7 @@ gulp.task("watch", function() {
   watch("./app/assets/styles/**/*.css", function() {
     gulp.start("cssInject");
   });
+
 });
 
 gulp.task("cssInject", ["styles"] ,function() {

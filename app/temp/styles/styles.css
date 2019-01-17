@@ -648,9 +648,15 @@ box-shadow: 0px 1.5px 5px 0px rgba(0,0,0,0.75);
     margin: 20px;
   }
 .menu-preview__images img {
+      position: relative;
       width: 49%;
       height: 49%;
     }
+.menu-preview__images img:hover {
+        position: relative;
+        width: 75%;
+        height: 75%;
+      }
 /* font-family: 'Charm', cursive;
 font-family: 'Playfair Display', serif;
 font-family: 'Montserrat', sans-serif; */
